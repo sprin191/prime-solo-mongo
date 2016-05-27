@@ -48,8 +48,8 @@ orderDate: {$gt: new Date("2016-01-01")}
 
 // 7. Find orders with lineItems that have a quantity that is less than 50, but greater than 5. HINT: Look at $and.
 db.orders.find({$and: [
-{"lineItems.0.quantity": {$lt: 50}},
-{"lineItems.0.quantity": {$gt: 5}
+{"lineItems.quantity": {$lt: 50}},
+{"lineItems.quantity": {$gt: 5}
   }]}).pretty()
 
 // 8. Update one of your line items to 42.99. HINT: Look at dot notation.
